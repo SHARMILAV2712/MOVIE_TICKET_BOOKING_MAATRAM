@@ -1,0 +1,20 @@
+class User_details:
+    print("Welcome to AGS Cinemas! Have a Good Day!")
+    def __init__ (self,user_id, password,name,gender,mail):
+        self.user_id=user_id
+        self.password=password
+        self.name=name
+        self.gender=gender
+        self.mail=mail
+    def display_details(self):
+        print("Name:",self.name,"\nGender:",self.gender,"\nMail ID:",self.mail,"\n-------------------")
+    def logging_in(self,user_id_entered,password_entered):
+        if self.user_id==user_id_entered and self.password==password_entered:
+            print("Login Sucessful !\n-------------------")
+            user1.display_details()
+        else:
+            print("**Invalid Details**\n Please, Enter the details correctly")
+user_id_entered = input("Enter user_id: ")
+password_entered = input("Enter password: ")
+user1 = User_details("sharmi27","9789","Sharmila","Female","sha@gmail.com")
+user1.logging_in(user_id_entered,password_entered)
